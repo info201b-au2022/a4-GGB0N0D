@@ -1,8 +1,8 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
-date: '2022-11-01'
-output: html_document
+title: "Incarceration Trends Data Visualization Analysis"
+author: "Vincent Li"
+date: '2022-11-23'
+output: index.html
 ---
 
 ```{r echo=FALSE, eval=TRUE, message=FALSE}
@@ -12,34 +12,69 @@ source("../source/analysis.R")
 
 ## Abstract 
 [TODO: Include a short abstract (about 50 words)]
-
-# Test (TODO: Remove before submission!!)
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
-
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-of numbers: `r test_query2(num)`.
-
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
-
-```{r echo=TRUE}
-num <- 5
-sum <- sum(test_query2(num))
-print(sum)
-```
+  This report analyze ... summarize.. visualize... 
 
 ## Introduction 
 [TODO]
+  The dataset is provided by the project of _Vera_ that includes data collections of the Census of Jails (COJ) and the Annual Survey of Jails (ASJ) from 2013 to 2020. 
 
 ## Data Summary 
-[TODO]
+``` {r echo = TRUE}
+highest_proportion_black_2013
 
-[TODO ... other sections ... See Canvas for details]
+```
+This value
 
-_All the very best with your work!_
+``` {r echo = TRUE}
+highest_change_proportion_black
+
+```
+This value
+
+``` {r echo = TRUE}
+highest_proportion_black_2018
+
+```
+This value
+
+``` {r echo = TRUE}
+highest_change_proportion_black
+
+```
+This value
+
+## Growth of the U.S. Prison Population
+``` {r echo = TRUE}
+get_year_jail_pop()
+plot_jail_pop_for_us()
+
+```
+
+## Growth of the Prison Population by State
+``` {r echo = TRUE}
+check_states <- c("WA", "CA", "NY", "OR", "KS")
+
+get_jail_pop_by_states(check_states)
+
+plot_jail_pop_by_states(check_states)
+
+```
+
+## Change in Black People Jail Proportion in Mobile County (1970-2018)
+``` {r echo = TRUE}
+get_jail_prop_year_Mobile()
+
+plot_jail_prop_year_Mobile()
+
+```
+
+
+## Proportion of Black People in Jail Populatoin Each State 2013
+``` {r echo = TRUE}
+get_state_black_jail_prop()
+
+map_black_jail_prop_states()
+
+```
+
 

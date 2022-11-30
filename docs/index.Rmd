@@ -1,5 +1,5 @@
 ---
-title: "Incarceration Trends Data Visualization Analysis"
+title: "Incarceration Trends of Black People In Jail Population Data Visualization Analysis"
 author: "Vincent Li"
 date: '2022-11-23'
 output: html_document
@@ -11,35 +11,38 @@ source("../source/analysis.R")
 ```
 
 ## Abstract 
-  This report analyze ... summarize.. visualize... 
+  This report analyze the incarceration data of the United States and provides data visualiazations. It will summarize some interesting key variables that potentially reveal the inequaility incarceration trend in some area of the United States. The visualizations shows the trend of changes of the incarcerations status of certain area in certain year of the U.S.
 
 ## Introduction 
-  The dataset is provided by the project of _Vera_ that includes data collections of the Census of Jails (COJ) and the Annual Survey of Jails (ASJ) from 2013 to 2020. 
+  The dataset is provided by the project of _Vera_ that includes data collections from the Census of Jails (COJ) and the Annual Survey of Jails (ASJ) from 1970 to 2018.
+  The direct stakeholder of the project can be data scientists who are seeking to make analysis base on the helpful data resources of incarceration data. The indirect stakeholder can be prisoners in each region since the information of them are being recorded as datasets and published on websites.
+  The central value of this project 
 
 ## Data Summary 
 ``` {r echo = TRUE}
 highest_proportion_black_2013
 
 ```
-This value
-
-``` {r echo = TRUE}
-highest_change_proportion_black
-
-```
-This value
+This value shows the proportion of black people in jail population in Mobile County, Alabama, in 2013. THe reason that I choose 2013 as the interpreting year is because the Black Lives Matter movements started in 2013.We can see that the proportion is unconventionally high and reach a number above 9.00. Therefore, we can interpret that there is inormal situation there.
 
 ``` {r echo = TRUE}
 highest_proportion_black_2018
 
 ```
-This value
+This value shows the proportion of black people in jail population in Caswell County, North Carolina, in 2018. we can see that the county changes this time in 2018, but it is still unconventionally high.
 
 ``` {r echo = TRUE}
 highest_change_proportion_black
 
 ```
-This value
+This value interpret and find the county that has the highest change in proportion of black people in jail population from 2013 to 2018, and the result came up to be Mobile County, Alabama. 
+
+
+``` {r echo = TRUE}
+proportion_black_jail_pop
+
+```
+This dataframe provides the order of county that has the proportion of average black people in jail versus avrage total black people in the county in 2013 from high to low. 
 
 ## Growth of the U.S. Prison Population
 ``` {r echo = TRUE}
@@ -47,18 +50,18 @@ get_year_jail_pop()
 plot_jail_pop_for_us()
 
 ```
-This chart
+This chart shows the the change of the U.S. Prison Population from 1970 to 2018. We can see that starting late 1970s, the trend of jail population continually increases each year until late 2000s, and remain relatively similar jail population in 2010s.
 
 ## Growth of the Prison Population by State
 ``` {r echo = TRUE}
-check_states <- c("WA", "CA", "NY", "OR", "KS")
+check_states <- c("WA", "CA", "NY", "OR", "AL")
 
 get_jail_pop_by_states(check_states)
 
 plot_jail_pop_by_states(check_states)
 
 ```
-This chart
+This chart shows the change in jail population in five different states from 1970 to 2018. We can see that California has the highest jail population all time and has the greatest rate of increase trend from late 1970s to 2010s.
 
 ## Change in Black People Jail Proportion in Mobile County (1970-2018)
 ``` {r echo = TRUE}

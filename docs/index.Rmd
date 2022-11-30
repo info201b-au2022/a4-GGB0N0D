@@ -2,20 +2,18 @@
 title: "Incarceration Trends Data Visualization Analysis"
 author: "Vincent Li"
 date: '2022-11-23'
-output: index.html
+output: html_document
 ---
 
-```{r echo=FALSE, eval=TRUE, message=FALSE}
+```{r echo=FALSE, eval=TRUE, message=FALSE, warning = FALSE}
 source("../source/a4-helpers.R")
 source("../source/analysis.R")
 ```
 
 ## Abstract 
-[TODO: Include a short abstract (about 50 words)]
   This report analyze ... summarize.. visualize... 
 
 ## Introduction 
-[TODO]
   The dataset is provided by the project of _Vera_ that includes data collections of the Census of Jails (COJ) and the Annual Survey of Jails (ASJ) from 2013 to 2020. 
 
 ## Data Summary 
@@ -49,6 +47,7 @@ get_year_jail_pop()
 plot_jail_pop_for_us()
 
 ```
+This chart
 
 ## Growth of the Prison Population by State
 ``` {r echo = TRUE}
@@ -59,6 +58,7 @@ get_jail_pop_by_states(check_states)
 plot_jail_pop_by_states(check_states)
 
 ```
+This chart
 
 ## Change in Black People Jail Proportion in Mobile County (1970-2018)
 ``` {r echo = TRUE}
@@ -67,7 +67,7 @@ get_jail_prop_year_Mobile()
 plot_jail_prop_year_Mobile()
 
 ```
-
+This chart 
 
 ## Proportion of Black People in Jail Populatoin Each State 2013
 ``` {r echo = TRUE}
@@ -76,5 +76,5 @@ get_state_black_jail_prop()
 map_black_jail_prop_states()
 
 ```
-
+This map 
 

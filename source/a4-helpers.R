@@ -4,6 +4,7 @@ library(tidyverse)
 #---------------------------------------------------------------------------#
 # This function returns the incarceration data as a dataframe
 # Note: The CSV file is stored on my local machine to speed load times
+# https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv
 #---------------------------------------------------------------------------#
 get_data <- function(num_records=-1) {
   fname <- "~/info201/data/incarceration_trends.csv"

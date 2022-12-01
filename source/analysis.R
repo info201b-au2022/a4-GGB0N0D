@@ -104,8 +104,7 @@ plot_jail_pop_for_us <- function()  {
     labs(title = "Increase of Jail Population in U.S. (1970-2018)",
          x = "Year",
          y = "Total Jail Population",
-         caption = "This chart reveals the change of jail population in the whole
-         US from 1970 to 2018. We can see that the trend of the chart is increasing")
+         caption = "Figure.1")
   
   return(plot)
 } 
@@ -134,9 +133,7 @@ plot_jail_pop_by_states <- function(states) {
     labs(title = "Growth of Jail Population in States (1970-2018)",
          x = "Year",
          y = "Total Jail Population",
-         caption = "This chart shows the change in jail population in five different states 
-         from 1970 to 2018. We can see that California has the highest jail population all time
-         and has the greatest rate of increase trend")
+         caption = "Figure.2")
   
   return(plot)
 }
@@ -166,8 +163,7 @@ plot_jail_prop_year_Mobile <- function() {
     labs(title = "Change in Black People Jail Proportion in Mobile County (1970-2018)",
          x = "Year",
          y = "Black People Jail Proportion",
-         caption = "This chart shows that in 2013, the proportion of black people jail
-         population in Mobile County increased a huge amount and remains high in the next few years")
+         caption = "Figure.3")
   
   return(plot)
 }
@@ -219,10 +215,9 @@ map_black_jail_prop_states <- function() {
     ) +
     coord_map() +
     scale_fill_continuous(low = "White", high = "Red") +
-    labs(title = "Proportion of Black People in Jail Populatoin Each State 2013", 
+    labs(title = "Proportion of Black People in Jail Population Each State 2013", 
          fill = "Proportion",
-         caption = "This map shows the states in midsouth such as Louisiana has the highest proportion
-         of black people in jail population in 2013") +
+         caption = "Figure.4") +
     blank_theme
   
   return(plot)

@@ -84,15 +84,13 @@ proportion_black_jail_pop <- incarceration_df %>%
 ## Section 3  ---- 
 #----------------------------------------------------------------------------#
 # Growth of the U.S. Prison Population
-# Your functions might go here ... <todo:  update comment>
-#----------------------------------------------------------------------------#
 # This function takes no parameter and return a dataframe that shows the total jail
 # population each year in the U.S.
 get_year_jail_pop <- function() {
   jail_pop_years <- incarceration_df %>% 
     group_by(year) %>% 
     select(total_jail_pop)
-    
+  
   return(jail_pop_years)   
 }
 
@@ -108,6 +106,8 @@ plot_jail_pop_for_us <- function()  {
   
   return(plot)
 } 
+
+#----------------------------------------------------------------------------#
 
 ## Section 4  ---- 
 #----------------------------------------------------------------------------#
